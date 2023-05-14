@@ -11,7 +11,6 @@ from utils import *
 
 # Training settings
 parser = argparse.ArgumentParser()
-parser.add_argument('--alias', type=str, default='PFedRec')
 parser.add_argument('--clients_sample_ratio', type=float, default=1.0)
 parser.add_argument('--clients_sample_num', type=int, default=0)
 parser.add_argument('--num_round', type=int, default=100)
@@ -20,7 +19,7 @@ parser.add_argument('--lr_eta', type=int, default=80)
 parser.add_argument('--batch_size', type=int, default=256)
 parser.add_argument('--optimizer', type=str, default='sgd')
 parser.add_argument('--lr', type=float, default=0.1)
-parser.add_argument('--dataset', type=str, default='100k')
+parser.add_argument('--dataset', type=str, default='ml-100k')
 parser.add_argument('--num_users', type=int)
 parser.add_argument('--num_items', type=int)
 parser.add_argument('--latent_dim', type=int, default=32)
@@ -28,8 +27,6 @@ parser.add_argument('--num_negative', type=int, default=4)
 parser.add_argument('--l2_regularization', type=float, default=0.)
 parser.add_argument('--use_cuda', type=bool, default=True)
 parser.add_argument('--device_id', type=int, default=1)
-parser.add_argument('--model_dir', type=str, default='checkpoints/{}_Epoch{}_HR{:.4f}_NDCG{:.4f}.model')
-parser.add_argument('--ind', type=int, default=0)
 args = parser.parse_args()
 
 # Model.
@@ -37,7 +34,7 @@ config = vars(args)
 if config['dataset'] == 'ml-1m':
     config['num_users'] = 6040
     config['num_items'] = 3706
-elif config['dataset'] == '100k':
+elif config['dataset'] == 'ml-100k':
     config['num_users'] = 943
     config['num_items'] = 1682
 elif config['dataset'] == 'lastfm-2k':
@@ -60,7 +57,7 @@ initLogging(logname)
 dataset_dir = "/data/" + config['dataset'] + "/" + "ratings.dat"
 if config['dataset'] == "ml-1m":
     rating = pd.read_csv(dataset_dir, sep='::', header=None, names=['uid', 'mid', 'rating', 'timestamp'], engine='python')
-elif config['dataset'] == "100k":
+elif config['dataset'] == "ml-100k":
     rating = pd.read_csv(dataset_dir, sep=",", header=None, names=['uid', 'mid', 'rating', 'timestamp'], engine='python')
 elif config['dataset'] == "lastfm-2k":
     rating = pd.read_csv(dataset_dir, sep=",", header=None, names=['uid', 'mid', 'rating', 'timestamp'],  engine='python')
