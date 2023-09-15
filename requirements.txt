@@ -1,0 +1,25 @@
+cycler==0.11.0
+decorator @ file:///opt/conda/conda-bld/decorator_1643638310831/work
+fonttools==4.37.4
+joblib==1.2.0
+kiwisolver==1.4.4
+matplotlib==3.5.3
+networkx==2.2
+numpy @ file:///home/conda/feedstock_root/build_artifacts/numpy_1649806299270/work
+packaging==21.3
+pandas==1.3.5
+Pillow @ file:///home/conda/feedstock_root/build_artifacts/pillow_1660385854171/work
+protobuf==3.20.1
+pyparsing==3.0.9
+python-dateutil @ file:///home/conda/feedstock_root/build_artifacts/python-dateutil_1626286286081/work
+pytz @ file:///home/conda/feedstock_root/build_artifacts/pytz_1660580468234/work
+scikit-learn==1.0.2
+scipy==1.7.3
+six @ file:///home/conda/feedstock_root/build_artifacts/six_1620240208055/work
+sklearn==0.0
+tensorboardX @ file:///home/conda/feedstock_root/build_artifacts/tensorboardx_1654638215170/work
+threadpoolctl==3.1.0
+torch==1.8.0+cu111
+torchaudio==0.8.0
+torchvision==0.9.0+cu111
+typing_extensions @ file:///home/conda/feedstock_root/build_artifacts/typing_extensions_1656706066251/work
