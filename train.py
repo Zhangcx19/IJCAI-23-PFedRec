@@ -54,7 +54,7 @@ logname = os.path.join(path, current_time+'.txt')
 initLogging(logname)
 
 # Load Data
-dataset_dir = "/data/" + config['dataset'] + "/" + "ratings.dat"
+dataset_dir = "./data/" + config['dataset'] + "/" + "ratings.dat"
 if config['dataset'] == "ml-1m":
     rating = pd.read_csv(dataset_dir, sep='::', header=None, names=['uid', 'mid', 'rating', 'timestamp'], engine='python')
 elif config['dataset'] == "ml-100k":
