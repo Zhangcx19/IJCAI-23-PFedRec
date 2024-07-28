@@ -21,10 +21,11 @@ python train.py
 If you find this project helpful, please consider to cite the following paper:
 
 ```
-@article{zhang2023dual,
-  title={Dual Personalization on Federated Recommendation},
+@inproceedings{zhang2023dual,
+  title={Dual personalization on federated recommendation},
   author={Zhang, Chunxu and Long, Guodong and Zhou, Tianyi and Yan, Peng and Zhang, Zijian and Zhang, Chengqi and Yang, Bo},
-  journal={arXiv preprint arXiv:2301.08143},
+  booktitle={Proceedings of the Thirty-Second International Joint Conference on Artificial Intelligence},
+  pages={4558--4566},
   year={2023}
 }
 ```
